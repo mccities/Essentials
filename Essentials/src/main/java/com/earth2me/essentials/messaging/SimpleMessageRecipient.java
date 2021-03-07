@@ -110,9 +110,9 @@ public class SimpleMessageRecipient implements IMessageRecipient {
                                     && !onlineUser.equals(senderUser)
                                     && !onlineUser.equals(recipient)) {
                                 if (senderUser.isMuted() && ess.getSettings().getSocialSpyListenMutedPlayers()) {
-                                    onlineUser.sendMessage(tl("socialMutedSpyPrefix") + tl("socialSpyMsgFormat", getDisplayName(), recipient.getDisplayName(), message));
+                                    onlineUser.sendMessage(tl("socialMutedSpyPrefix") + tl("socialSpyMsgFormat", getDisplayName(), recipient.getName(), message));
                                 } else {
-                                    onlineUser.sendMessage(tl("socialSpyPrefix") + tl("socialSpyMsgFormat", getDisplayName(), recipient.getDisplayName(), message));
+                                    onlineUser.sendMessage(tl("socialSpyPrefix") + tl("socialSpyMsgFormat", getDisplayName(), recipient.getName(), message));
                                 }
                             }
                         }
